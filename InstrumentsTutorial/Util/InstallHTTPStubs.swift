@@ -5,24 +5,30 @@
 //  Created by pengyucheng on 13/04/2017.
 //  Copyright © 2017 Razeware LLC. All rights reserved.
 //
-/**
- OHHTTPStubsProtocol 拦截 HTTP 请求
- OHHTTPStubs 单例管理 OHHTTPStubsDescriptor 实例
- OHHTTPStubsResponse 伪造 HTTP 响应
- 一些辅助功能
- OHHTTPStubs 不支持 后台sessions(sessions created using [NSURLSessionConfiguration backgroundSessionConfiguration]) because background sessions don't allow the use of custom NSURLProtocols and are handled by the iOS Operating System itself.
- [Demo](https://github.com/AliSoftware/OHHTTPStubs/blob/master/Examples/Swift/MainViewController.swift)
- **/
 
 import UIKit
 import OHHTTPStubs
 
+/**
+ 得到的
+ 
+- OHHTTPStubsProtocol 拦截 HTTP 请求
+- OHHTTPStubs 单例管理 OHHTTPStubsDescriptor 实例
+- OHHTTPStubsResponse 伪造 HTTP 响应
+- 一些辅助功能
+ 
+ 注意：OHHTTPStubs 不支持 后台sessions(sessions created using [NSURLSessionConfiguration backgroundSessionConfiguration]) because background sessions don't allow the use of custom NSURLProtocols and are handled by the iOS Operating System itself.
+ 
+ [Demo](https://github.com/AliSoftware/OHHTTPStubs/blob/master/Examples/Swift/MainViewController.swift)
+ 
+ [官方文档](https://github.com/AliSoftware/OHHTTPStubs/wiki/Usage-Examples)
+ */
 class InstallHTTPStubs: NSObject
 {
     var installStubs:OHHTTPStubsDescriptor?
     
     // 激活模拟器
-    func activateHttpStub()
+    public class func activateHttpStub()
     {
         //
         OHHTTPStubs.onStubActivation { (request, stubDesc, response) in
@@ -44,7 +50,6 @@ class InstallHTTPStubs: NSObject
             let responseStub = fixture(filePath: imagePath!, headers: header)
             return responseStub
         }
-        
         installStubs?.name = "图片路径"
     }
     

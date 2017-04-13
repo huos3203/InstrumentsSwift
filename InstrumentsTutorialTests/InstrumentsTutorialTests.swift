@@ -9,11 +9,15 @@
 import UIKit
 import XCTest
 @testable import InstrumentsTutorial
+@testable import Alamofire
+
 class InstrumentsTutorialTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        //激活虚拟网络
+        InstallHTTPStubs.activateHttpStub()
     }
     
     override func tearDown() {
@@ -21,9 +25,15 @@ class InstrumentsTutorialTests: XCTestCase {
         super.tearDown()
     }
     
+    ///访问json数据
     func testExample() {
         // This is an example of a functional test case.
-        
+        InstallHTTPStubs().installImageStub(2, 3)
+        Alamofire.request("https://www.baidu.com").response { (defaultRessponse) in
+            //
+            let str = defaultRessponse.response?.url?.absoluteString
+            print(str)
+        }
     }
     
     func testPerformanceExample() {

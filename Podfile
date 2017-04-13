@@ -12,6 +12,7 @@ target 'InstrumentsTutorial' do
 
   # Pods for InstrumentsTutorial
   pod 'OHHTTPStubs/Swift'
+  pod 'Alamofire', '~> 4.0'   #swift3.0
   addFabric
   #target 'InstrumentsTutorialTests' do
    # inherit! :search_paths
