@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14FE0B881E9F6C4200AC3A9E /* InstallHTTPStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE0B871E9F6C4200AC3A9E /* InstallHTTPStubs.swift */; };
 		17A1E85E1AB0E6BC003A4798 /* ImageUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A1E85D1AB0E6BC003A4798 /* ImageUtilities.swift */; };
 		17D45BFD1A9F52D400DC4881 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D45BFC1A9F52D400DC4881 /* AppDelegate.swift */; };
 		17D45BFF1A9F52D400DC4881 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D45BFE1A9F52D400DC4881 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		143BBE621CED62E400BE3A77 /* readMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = readMe.md; path = InstrumentsTutorial/readMe.md; sourceTree = "<group>"; };
+		14FE0B871E9F6C4200AC3A9E /* InstallHTTPStubs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstallHTTPStubs.swift; path = Util/InstallHTTPStubs.swift; sourceTree = "<group>"; };
 		17A1E85D1AB0E6BC003A4798 /* ImageUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtilities.swift; sourceTree = "<group>"; };
 		17D45BF71A9F52D400DC4881 /* InstrumentsTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstrumentsTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17D45BFB1A9F52D400DC4881 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14FE0B891E9F6C5100AC3A9E /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				14FE0B871E9F6C4200AC3A9E /* InstallHTTPStubs.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		17D45BEE1A9F52D400DC4881 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +102,7 @@
 		17D45BF91A9F52D400DC4881 /* InstrumentsTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				14FE0B891E9F6C5100AC3A9E /* Util */,
 				17D45BFC1A9F52D400DC4881 /* AppDelegate.swift */,
 				17D45BFE1A9F52D400DC4881 /* ViewController.swift */,
 				17D67ABA1AA20CD300CFB114 /* SearchResultsViewController.swift */,
@@ -323,6 +334,7 @@
 				17D45BFF1A9F52D400DC4881 /* ViewController.swift in Sources */,
 				17D45BFD1A9F52D400DC4881 /* AppDelegate.swift in Sources */,
 				17A1E85E1AB0E6BC003A4798 /* ImageUtilities.swift in Sources */,
+				14FE0B881E9F6C4200AC3A9E /* InstallHTTPStubs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +459,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2C4H9T5RF5;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = InstrumentsTutorial/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -465,6 +478,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2C4H9T5RF5;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = InstrumentsTutorial/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

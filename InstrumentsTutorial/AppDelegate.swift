@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //添加日志
         Fabric.with([Crashlytics()])
-        Crashlytics.sharedInstance().crash()
+        //Crashlytics.sharedInstance().crash()
         
         return true
     }

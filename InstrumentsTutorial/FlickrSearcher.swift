@@ -102,7 +102,7 @@ class Flickr {
     
     let searchURL = flickrSearchURLForSearchTerm(searchTerm)
     let searchRequest = URLRequest(url: searchURL)
-    
+    //MARK: 安装模拟器
     NSURLConnection.sendAsynchronousRequest(searchRequest, queue: processingQueue) {response, data, error in
       if error != nil {
         completion(nil,error as NSError?)

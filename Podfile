@@ -11,6 +11,7 @@ target 'InstrumentsTutorial' do
   project 'InstrumentsTutorial.xcodeproj'
 
   # Pods for InstrumentsTutorial
+  pod 'OHHTTPStubs/Swift'
   addFabric
   #target 'InstrumentsTutorialTests' do
    # inherit! :search_paths
