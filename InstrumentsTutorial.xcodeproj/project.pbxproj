@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		14FE0B881E9F6C4200AC3A9E /* InstallHTTPStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FE0B871E9F6C4200AC3A9E /* InstallHTTPStubs.swift */; };
+		14FE0B8F1E9F918400AC3A9E /* 0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14FE0B8B1E9F918400AC3A9E /* 0.plist */; };
+		14FE0B901E9F918400AC3A9E /* 1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14FE0B8C1E9F918400AC3A9E /* 1.plist */; };
+		14FE0B911E9F918400AC3A9E /* 2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14FE0B8D1E9F918400AC3A9E /* 2.plist */; };
+		14FE0B921E9F918400AC3A9E /* 3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14FE0B8E1E9F918400AC3A9E /* 3.plist */; };
 		17A1E85E1AB0E6BC003A4798 /* ImageUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A1E85D1AB0E6BC003A4798 /* ImageUtilities.swift */; };
 		17D45BFD1A9F52D400DC4881 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D45BFC1A9F52D400DC4881 /* AppDelegate.swift */; };
 		17D45BFF1A9F52D400DC4881 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D45BFE1A9F52D400DC4881 /* ViewController.swift */; };
@@ -33,6 +37,10 @@
 /* Begin PBXFileReference section */
 		143BBE621CED62E400BE3A77 /* readMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = readMe.md; path = InstrumentsTutorial/readMe.md; sourceTree = "<group>"; };
 		14FE0B871E9F6C4200AC3A9E /* InstallHTTPStubs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstallHTTPStubs.swift; path = Util/InstallHTTPStubs.swift; sourceTree = "<group>"; };
+		14FE0B8B1E9F918400AC3A9E /* 0.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 0.plist; sourceTree = "<group>"; };
+		14FE0B8C1E9F918400AC3A9E /* 1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 1.plist; sourceTree = "<group>"; };
+		14FE0B8D1E9F918400AC3A9E /* 2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 2.plist; sourceTree = "<group>"; };
+		14FE0B8E1E9F918400AC3A9E /* 3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 3.plist; sourceTree = "<group>"; };
 		17A1E85D1AB0E6BC003A4798 /* ImageUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtilities.swift; sourceTree = "<group>"; };
 		17D45BF71A9F52D400DC4881 /* InstrumentsTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstrumentsTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17D45BFB1A9F52D400DC4881 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,6 +86,17 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
+		14FE0B8A1E9F918400AC3A9E /* source */ = {
+			isa = PBXGroup;
+			children = (
+				14FE0B8B1E9F918400AC3A9E /* 0.plist */,
+				14FE0B8C1E9F918400AC3A9E /* 1.plist */,
+				14FE0B8D1E9F918400AC3A9E /* 2.plist */,
+				14FE0B8E1E9F918400AC3A9E /* 3.plist */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
 		17D45BEE1A9F52D400DC4881 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				17D45BFB1A9F52D400DC4881 /* Info.plist */,
+				14FE0B8A1E9F918400AC3A9E /* source */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -247,9 +267,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14FE0B901E9F918400AC3A9E /* 1.plist in Resources */,
 				17D45C021A9F52D400DC4881 /* Main.storyboard in Resources */,
+				14FE0B8F1E9F918400AC3A9E /* 0.plist in Resources */,
+				14FE0B911E9F918400AC3A9E /* 2.plist in Resources */,
 				17D45C071A9F52D400DC4881 /* LaunchScreen.xib in Resources */,
 				17D45C041A9F52D400DC4881 /* Images.xcassets in Resources */,
+				14FE0B921E9F918400AC3A9E /* 3.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
