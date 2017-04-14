@@ -10,6 +10,7 @@ import UIKit
 import XCTest
 @testable import InstrumentsTutorial
 @testable import Alamofire
+//@testable import OHHTTPStubs
 
 class InstrumentsTutorialTests: XCTestCase {
     
@@ -47,6 +48,8 @@ class InstrumentsTutorialTests: XCTestCase {
     //返回字典
     func testJSONData()
     {
+        let jsonData = InstallHTTPStubs().fileToJSON(plist: "0.plist")
+        let jsonStr = String.init(data: jsonData, encoding: .utf8)
         
     }
     

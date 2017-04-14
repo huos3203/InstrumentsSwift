@@ -59,5 +59,40 @@ class InstallHTTPStubs: NSObject
     
     
     //模拟data
+    func installJSONDataStub(plist:String)
+    {
+        //plist转为JSON数据
+        let jsonData = fileToJSON(plist: plist)
+        
+        //封装响应包
+        
+        
+    }
+    
+    
+    func fileToJSON(plist:String)->Data
+    {
+        //
+        let filePath = OHPathForFile(plist, type(of:self))
+        let array = NSArray.init(contentsOfFile: filePath!)
+        var dict = [:]
+        array?.enumerateObjects({ (obj, index, bool) in
+            //
+            
+            
+        })
+        let dic = NSDictionary(contentsOfFile: filePath!) as! Dictionary<NSObject,Any>
+        var jsonData = Data()
+        if JSONSerialization.isValidJSONObject(dic)
+        {
+            do {
+                jsonData = try JSONSerialization.data(withJSONObject: dic, options: .prettyPrinted)
+            } catch {
+                //如果catch分句中没有任何匹配模式，那么这个分局将会匹配到所有的错误，并把这些错误信息赋值给系统常量error
+                print(error)
+            }
+        }
+        return jsonData
+    }
 
 }
