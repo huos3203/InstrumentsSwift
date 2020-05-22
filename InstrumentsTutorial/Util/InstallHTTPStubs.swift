@@ -8,12 +8,12 @@
 
 import UIKit
 import OHHTTPStubs
-
+import HandyJSON
 /**
  得到的
  
 - OHHTTPStubsProtocol 拦截 HTTP 请求
-- OHHTTPStubs 单例管理 OHHTTPStubsDescriptor 实例
+- OHHTTPStubs 单例管理 HTTPStubsDescriptor 实例
 - OHHTTPStubsResponse 伪造 HTTP 响应
 - 一些辅助功能
  
@@ -23,7 +23,7 @@ import OHHTTPStubs
  
  [官方文档](https://github.com/AliSoftware/OHHTTPStubs/wiki/Usage-Examples)
  */
-class InstallHTTPStubs: NSObject
+public class InstallHTTPStubs: NSObject
 {
     var installStubs:HTTPStubsDescriptor?
     
@@ -31,9 +31,9 @@ class InstallHTTPStubs: NSObject
     public class func activateHttpStub()
     {
         //
-        HTTPStubs.onStubActivation { (request, stubDesc, response) in
+         HTTPStubs.onStubActivation { (request: URLRequest, stub: HTTPStubsDescriptor, response: HTTPStubsResponse) in
             //
-            print("[OHHTTPStubs] Request to \(request.url) has been stubbed with \(stubDesc.name)")
+            print("[OHHTTPStubs] Request to \(request.url!) has been stubbed with \(stub.name)")
         }
         HTTPStubs.setEnabled(true)
     }
@@ -47,7 +47,7 @@ class InstallHTTPStubs: NSObject
             //
             let imagePath = OHPathForFile("stub.jpg", type(of:self))
             let header = ["Content-Type":"image/jpeg"]
-            let responseStub = fixture(filePath: imagePath!, headers: header)
+            let responseStub = fixture(filePath: imagePath!, headers: header as [NSObject : AnyObject])
             return responseStub
         }
         installStubs?.name = "图片路径"
@@ -59,29 +59,37 @@ class InstallHTTPStubs: NSObject
     
     
     //模拟data
-    func installJSONDataStub(plist:String)
+    public func installJSONDataStub(plist:String)
     {
         //plist转为JSON数据
-        let jsonData = fileToJSON(plist: plist)
+        let imagePath = OHPathForFile("0.plist", type(of:self))
+        let jsonData = fileToJSON(plist: imagePath!)
         
         //封装响应包
-        
+        installStubs = HTTPStubs.stubRequests(passingTest: { (request:URLRequest) -> Bool in
+            //
+            return request.url?.host == ""
+        }, withStubResponse: { (request:URLRequest) -> HTTPStubsResponse in
+            //
+            let response = HTTPStubsResponse.init(jsonObject: jsonData, statusCode: 200, headers: ["Content-Type":"application/json"])
+            return response
+        })
         
     }
     
     
-    func fileToJSON(plist:String)->Data
+    public func fileToJSON(plist:String)->Data
     {
         //
-        let filePath = OHPathForFile(plist, type(of:self))
-        let array = NSArray.init(contentsOfFile: filePath!)
-        var dict = [:] as Dictionary
+        let filePath = plist//OHPathForFile(plist, type(of:self))
+        let array = NSArray.init(contentsOfFile: filePath)
+         _ = [:]
         array?.enumerateObjects({ (obj, index, bool) in
             //
             
             
         })
-        let dic = NSDictionary(contentsOfFile: filePath!) as! Dictionary<NSObject,Any>
+        let dic = array?[0]//NSDictionary(contentsOfFile: filePath) as! Dictionary<NSObject,Any>
         var jsonData = Data()
         if JSONSerialization.isValidJSONObject(dic)
         {
