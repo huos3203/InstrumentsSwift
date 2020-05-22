@@ -23,6 +23,7 @@
 		17D67ABB1AA20CD300CFB114 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D67ABA1AA20CD300CFB114 /* SearchResultsViewController.swift */; };
 		38AB818779C306EE7CDFE3C4 /* Pods_InstrumentsTutorialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4600144959286370E637EC /* Pods_InstrumentsTutorialTests.framework */; };
 		F4F7F400FDDBED8D9A71A837 /* Pods_InstrumentsTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4DB6A5E6D4B9A4F6D8A8E44 /* Pods_InstrumentsTutorial.framework */; };
+		F9C63CC82477ECF700044FB3 /* 0.json in Resources */ = {isa = PBXBuildFile; fileRef = F9C63CC72477ECF700044FB3 /* 0.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		C4DB6A5E6D4B9A4F6D8A8E44 /* Pods_InstrumentsTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstrumentsTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC4600144959286370E637EC /* Pods_InstrumentsTutorialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstrumentsTutorialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F6CA3B02DE59A37C01095D /* Pods-InstrumentsTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstrumentsTutorial.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-InstrumentsTutorial/Pods-InstrumentsTutorial.debug.xcconfig"; sourceTree = "<group>"; };
+		F9C63CC72477ECF700044FB3 /* 0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = 0.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				14FE0B8C1E9F918400AC3A9E /* 1.plist */,
 				14FE0B8D1E9F918400AC3A9E /* 2.plist */,
 				14FE0B8E1E9F918400AC3A9E /* 3.plist */,
+				F9C63CC72477ECF700044FB3 /* 0.json */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				14FE0B911E9F918400AC3A9E /* 2.plist in Resources */,
 				17D45C071A9F52D400DC4881 /* LaunchScreen.xib in Resources */,
 				17D45C041A9F52D400DC4881 /* Images.xcassets in Resources */,
+				F9C63CC82477ECF700044FB3 /* 0.json in Resources */,
 				14FE0B921E9F918400AC3A9E /* 3.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

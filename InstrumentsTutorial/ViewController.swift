@@ -21,7 +21,8 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    //模拟数据
+    InstallHTTPStubs().installJSONDataStub(plist: "")
     navigationItem.backBarButtonItem = UIBarButtonItem(title: "Search", style: .plain, target: nil, action: nil)
   }
   

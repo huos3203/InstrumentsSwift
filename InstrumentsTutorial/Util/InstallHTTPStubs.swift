@@ -61,17 +61,20 @@ public class InstallHTTPStubs: NSObject
     //模拟data
     public func installJSONDataStub(plist:String)
     {
-        //plist转为JSON数据
-        let imagePath = OHPathForFile("0.plist", type(of:self))
-        let jsonData = fileToJSON(plist: imagePath!)
+        
         
         //封装响应包
         installStubs = HTTPStubs.stubRequests(passingTest: { (request:URLRequest) -> Bool in
             //
-            return request.url?.host == ""
+            return request.url?.host == "api.flickr.com"
         }, withStubResponse: { (request:URLRequest) -> HTTPStubsResponse in
             //
-            let response = HTTPStubsResponse.init(jsonObject: jsonData, statusCode: 200, headers: ["Content-Type":"application/json"])
+            //plist转为JSON数据
+//            let jsonData = fileToJSON(plist: "0.plist")
+//            let response = HTTPStubsResponse.init(jsonObject: jsonData, statusCode: 200, headers: ["Content-Type":"application/json"])
+            
+            let filePath = OHPathForFile("0.json", type(of:self))
+            let response = HTTPStubsResponse.init(fileAtPath: filePath!, statusCode: 200, headers: ["Content-Type":"application/json"])
             return response
         })
         
@@ -81,25 +84,26 @@ public class InstallHTTPStubs: NSObject
     public func fileToJSON(plist:String)->Data
     {
         //
-        let filePath = plist//OHPathForFile(plist, type(of:self))
-        let array = NSArray.init(contentsOfFile: filePath)
-         _ = [:]
+        let filePath = OHPathForFile(plist, type(of:self))
+        let array = NSArray.init(contentsOfFile: filePath!)
+//        var dict = [:] as Dictionary
+        _ = [:]
         array?.enumerateObjects({ (obj, index, bool) in
             //
-            
-            
+
+
         })
-        let dic = array?[0]//NSDictionary(contentsOfFile: filePath) as! Dictionary<NSObject,Any>
-        var jsonData = Data()
-        if JSONSerialization.isValidJSONObject(dic)
-        {
+//        let dic = NSDictionary(contentsOfFile: filePath!)
+        var jsonData:Data = try!NSData(contentsOfFile: filePath!) as Data
+//        if JSONSerialization.isValidJSONObject(jsonData)
+//        {
             do {
-                jsonData = try JSONSerialization.data(withJSONObject: dic, options: .prettyPrinted)
+                jsonData = try JSONSerialization.data(withJSONObject: jsonData, options: .prettyPrinted)
             } catch {
                 //如果catch分句中没有任何匹配模式，那么这个分局将会匹配到所有的错误，并把这些错误信息赋值给系统常量error
                 print(error)
             }
-        }
+//        }
         return jsonData
     }
 

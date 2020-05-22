@@ -25,20 +25,24 @@ class FlickrPhoto : Equatable {
   fileprivate let server : String
   fileprivate let secret : String
   
+  fileprivate let imgUrl : String
+    
   //定义在图片下载完成后处理的方法属性
   typealias ImageLoadCompletion = (_ image: UIImage?, _ error: NSError?) -> Void
   
   //初始化下载过程中需要的所有属性
-  init (photoID:String, title:String, farm:Int, server:String, secret:String) {
+    init (photoID:String, title:String, farm:Int, server:String, secret:String,imgUrl:String) {
     self.photoID = photoID
     self.title = title
     self.farm = farm
     self.server = server
     self.secret = secret
+    self.imgUrl = imgUrl
   }
   
   func flickrImageURL(_ size:String = "m") -> URL {
-    return URL(string: "http://farm\(farm).staticflickr.com/\(server)/\(photoID)_\(secret)_\(size).jpg")!
+//    return URL(string: "http://farm\(farm).staticflickr.com/\(server)/\(photoID)_\(secret)_\(size).jpg")!
+    return URL(string: imgUrl)!
   }
   
     //下载预览图
@@ -140,8 +144,10 @@ class Flickr {
         let farm = photoDictionary["farm"] as? Int ?? 0
         let server = photoDictionary["server"] as? String ?? ""
         let secret = photoDictionary["secret"] as? String ?? ""
+        let imgUrl = photoDictionary["img"] as? String ?? ""
         
-        let flickrPhoto = FlickrPhoto(photoID: photoID, title: title, farm: farm, server: server, secret: secret)
+        
+        let flickrPhoto = FlickrPhoto(photoID: photoID, title: title, farm: farm, server: server, secret: secret, imgUrl: imgUrl)
         
         return flickrPhoto
       }
