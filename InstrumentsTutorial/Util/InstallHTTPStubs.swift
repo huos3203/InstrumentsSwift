@@ -25,17 +25,17 @@ import OHHTTPStubs
  */
 class InstallHTTPStubs: NSObject
 {
-    var installStubs:OHHTTPStubsDescriptor?
+    var installStubs:HTTPStubsDescriptor?
     
     // 激活模拟器
     public class func activateHttpStub()
     {
         //
-        OHHTTPStubs.onStubActivation { (request, stubDesc, response) in
+        HTTPStubs.onStubActivation { (request, stubDesc, response) in
             //
             print("[OHHTTPStubs] Request to \(request.url) has been stubbed with \(stubDesc.name)")
         }
-        OHHTTPStubs.setEnabled(true)
+        HTTPStubs.setEnabled(true)
     }
     
     
@@ -75,7 +75,7 @@ class InstallHTTPStubs: NSObject
         //
         let filePath = OHPathForFile(plist, type(of:self))
         let array = NSArray.init(contentsOfFile: filePath!)
-        var dict = [:]
+        var dict = [:] as Dictionary
         array?.enumerateObjects({ (obj, index, bool) in
             //
             

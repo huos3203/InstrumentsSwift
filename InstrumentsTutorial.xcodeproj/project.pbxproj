@@ -55,12 +55,12 @@
 		17D45C121A9F52D400DC4881 /* InstrumentsTutorialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentsTutorialTests.swift; sourceTree = "<group>"; };
 		17D67AB81AA1FE4A00CFB114 /* FlickrSearcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrSearcher.swift; sourceTree = "<group>"; };
 		17D67ABA1AA20CD300CFB114 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
-		3B8665761C4C97A036E22633 /* Pods-InstrumentsTutorialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstrumentsTutorialTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstrumentsTutorialTests/Pods-InstrumentsTutorialTests.release.xcconfig"; sourceTree = "<group>"; };
-		92338217344760D71C62F4F1 /* Pods-InstrumentsTutorialTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstrumentsTutorialTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstrumentsTutorialTests/Pods-InstrumentsTutorialTests.debug.xcconfig"; sourceTree = "<group>"; };
-		ADAA648F3C76B7349AA5A09D /* Pods-InstrumentsTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstrumentsTutorial.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstrumentsTutorial/Pods-InstrumentsTutorial.release.xcconfig"; sourceTree = "<group>"; };
+		3B8665761C4C97A036E22633 /* Pods-InstrumentsTutorialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstrumentsTutorialTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-InstrumentsTutorialTests/Pods-InstrumentsTutorialTests.release.xcconfig"; sourceTree = "<group>"; };
+		92338217344760D71C62F4F1 /* Pods-InstrumentsTutorialTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstrumentsTutorialTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-InstrumentsTutorialTests/Pods-InstrumentsTutorialTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ADAA648F3C76B7349AA5A09D /* Pods-InstrumentsTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstrumentsTutorial.release.xcconfig"; path = "../Pods/Target Support Files/Pods-InstrumentsTutorial/Pods-InstrumentsTutorial.release.xcconfig"; sourceTree = "<group>"; };
 		C4DB6A5E6D4B9A4F6D8A8E44 /* Pods_InstrumentsTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstrumentsTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC4600144959286370E637EC /* Pods_InstrumentsTutorialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstrumentsTutorialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2F6CA3B02DE59A37C01095D /* Pods-InstrumentsTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstrumentsTutorial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstrumentsTutorial/Pods-InstrumentsTutorial.debug.xcconfig"; sourceTree = "<group>"; };
+		D2F6CA3B02DE59A37C01095D /* Pods-InstrumentsTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstrumentsTutorial.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-InstrumentsTutorial/Pods-InstrumentsTutorial.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,7 +199,6 @@
 				17D45BF51A9F52D400DC4881 /* Resources */,
 				84AEDA391DC5E518001E8116 /* add Fabric */,
 				838188A3FD9BFC769F316D70 /* [CP] Embed Pods Frameworks */,
-				162425B9A3D26A06C50E1D8F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,8 +217,6 @@
 				17D45C081A9F52D400DC4881 /* Sources */,
 				17D45C091A9F52D400DC4881 /* Frameworks */,
 				17D45C0A1A9F52D400DC4881 /* Resources */,
-				2361FAEF8CD770AC4A4B0F17 /* [CP] Embed Pods Frameworks */,
-				CB13E8C431412700F292051D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -259,6 +256,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -298,49 +296,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		162425B9A3D26A06C50E1D8F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstrumentsTutorial/Pods-InstrumentsTutorial-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2361FAEF8CD770AC4A4B0F17 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstrumentsTutorialTests/Pods-InstrumentsTutorialTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6C7AB2FD2ED5DE93E3D75462 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InstrumentsTutorial-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		838188A3FD9BFC769F316D70 /* [CP] Embed Pods Frameworks */ = {
@@ -349,13 +320,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InstrumentsTutorial/Pods-InstrumentsTutorial-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs.common-Swift/OHHTTPStubs.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstrumentsTutorial/Pods-InstrumentsTutorial-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InstrumentsTutorial/Pods-InstrumentsTutorial-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		84AEDA391DC5E518001E8116 /* add Fabric */ = {
@@ -378,28 +354,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InstrumentsTutorialTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		CB13E8C431412700F292051D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstrumentsTutorialTests/Pods-InstrumentsTutorialTests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -547,7 +511,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = hsg.com.razeware.InstrumentsTutorial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
@@ -565,7 +529,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hsg.com.razeware.InstrumentsTutorial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
@@ -589,7 +553,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstrumentsTutorial.app/InstrumentsTutorial";
 			};
 			name = Debug;
@@ -609,7 +573,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstrumentsTutorial.app/InstrumentsTutorial";
 			};
 			name = Release;

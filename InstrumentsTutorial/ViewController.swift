@@ -99,7 +99,7 @@ extension ViewController : UITableViewDataSource {
     return true
   }
   
-  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
     if editingStyle == .delete {
       searches.remove(at: (indexPath as NSIndexPath).row)
       tableView.deleteRows(at: [ indexPath ], with: .fade)

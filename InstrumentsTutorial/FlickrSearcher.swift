@@ -154,7 +154,10 @@ class Flickr {
   }
   
   fileprivate func flickrSearchURLForSearchTerm(_ searchTerm:String) -> URL {
-    let escapedTerm = searchTerm.addingPercentEscapes(using: String.Encoding.utf8)!
+    //swift 3
+    //let escapedTerm = searchTerm.addingPercentEscapes(using: String.Encoding.utf8)!
+    //swift 4
+    let escapedTerm =  searchTerm.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
     let URLString = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(apiKey)&text=\(escapedTerm)&per_page=30&format=json&nojsoncallback=1"
     return URL(string: URLString)!
   }
